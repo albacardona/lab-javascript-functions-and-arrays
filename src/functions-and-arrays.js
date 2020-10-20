@@ -89,9 +89,32 @@ const wordsUnique = [
   'bring'
 ];
 
+function uniquifyArray(arr) {
+  let newArr = []
+  if (arr.length === 0 ) {
+    return null
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (i === arr.indexOf(arr[i])) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist (arr, word) {
+  if (arr.length === 0)
+  return null
+  if (arr.includes(word)) {
+      return true
+  } else {
+    return false
+  }
+}
+
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -132,3 +155,30 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+// BONUS #1
+function sum () {
+
+}
+
+// BONUS #2
+// const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+// function avg (arr) {
+//   if (arr.length ===0) {
+//     return null
+//   }
+//   let resultString = 0
+//   let resultNumber = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] == "string") {
+//     resultString += arr[i].length
+//   } else if (typeof arr[i] == "number") {
+//     resultNumber += arr[i]
+//   } else if (typeof arr[i] == true) {
+//     resultBoolean += 1
+//   }
+//   let average = resultString + resultNumber + resultBoolean/ arr.length
+
+//   return average
+// }
