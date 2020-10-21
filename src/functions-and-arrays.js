@@ -89,13 +89,26 @@ const wordsUnique = [
   'bring'
 ];
 
+// function uniquifyArray(arr) {
+//   if (arr.length === 0 ) {
+//     return null
+//   }
+//   let newArr = []
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === arr.indexOf(arr[i])) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
 function uniquifyArray(arr) {
-  let newArr = []
   if (arr.length === 0 ) {
     return null
   }
-  for (let i = 0; i < arr.length; i++) {
-    if (i === arr.indexOf(arr[i])) {
+  let newArr = []
+  for (let i = 0; 0 < arr.length; i++) {
+    if (!newArr.includes(arr[i])) {
       newArr.push(arr[i])
     }
   }
@@ -130,6 +143,18 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes (arr) {
+  if (arr.length === 0) {
+    return 0
+  }
+  let word = ''
+  for (let i = 0; i < arr.length; i++) {
+    if (word === arr[i]) {
+      return 1
+    }
+  }
+}
 
 // Iteration #8: Bonus
 
